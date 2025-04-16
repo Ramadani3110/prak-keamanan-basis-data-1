@@ -11,11 +11,9 @@
         content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
-
     <link rel="canonical" href="https://demo-basic.adminkit.io/pages-sign-in.html" />
 
-    <title>Sign In | AdminKit Demo</title>
+    <title>Login</title>
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sweetalert2.min.css') }}" rel="stylesheet">

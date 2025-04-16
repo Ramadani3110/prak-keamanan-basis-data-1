@@ -21,13 +21,13 @@
 
 			<li class="sidebar-item {{ Request::segment(1) === 'category' ? 'active' : '' }}">
 				<a class="sidebar-link " href="/category">
-					<i class="align-middle" data-feather="square"></i> <span class="align-middle">Category</span>
+					<i class="align-middle" data-feather="box"></i> <span class="align-middle">Category</span>
 				</a>
 			</li>
 
 			<li class="sidebar-item {{ Request::segment(1) === 'product' ? 'active' : '' }}">
 				<a class="sidebar-link" href="/product">
-					<i class="align-middle" data-feather="square"></i> <span class="align-middle">Product</span>
+					<i class="align-middle" data-feather="tag"></i> <span class="align-middle">Product</span>
 				</a>
 			</li>
 

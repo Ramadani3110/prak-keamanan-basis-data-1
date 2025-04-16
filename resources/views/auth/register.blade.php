@@ -11,11 +11,10 @@
         content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
     <link rel="canonical" href="https://demo-basic.adminkit.io/pages-sign-up.html" />
 
-    <title>Sign Up | AdminKit Demo</title>
+    <title>Register</title>
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/sweetalert2.min.css') }}" rel="stylesheet">
@@ -43,18 +42,37 @@
                                         @csrf
                                         <div class="mb-3">
                                             <label class="form-label">Full name</label>
-                                            <input class="form-control form-control-lg" type="text" name="name"
-                                                placeholder="Enter your name" />
+                                            <input class="form-control form-control-lg
+                                            @error('name') is-invalid @enderror" type="text" name="name"
+                                                value="{{ old('name') }}" placeholder="Enter your name" />
+                                            @error('name')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                            @enderror
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Email</label>
-                                            <input class="form-control form-control-lg" type="email" name="email"
+                                            <input
+                                                class="form-control form-control-lg @error('email') is-invalid @enderror"
+                                                type="email" name="email" value="{{ old('email') }}"
                                                 placeholder="Enter your email" />
+                                            @error('email')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                            @enderror
                                         </div>
                                         <div class="mb-3">
                                             <label class="form-label">Password</label>
-                                            <input class="form-control form-control-lg" type="password" name="password"
-                                                placeholder="Enter password" />
+                                            <input class="form-control form-control-lg
+                                            @error('password') is-invalid @enderror" type="password" name="password"
+                                                placeholder="Enter password" value="{{ old('password') }}" />
+                                            @error('email')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                            </div>
+                                            @enderror
                                         </div>
                                         <div class="d-grid gap-2 mt-3">
                                             <button type="submit" class="btn btn-lg btn-primary">Register</button>

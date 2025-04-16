@@ -61,7 +61,7 @@ class AuthController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|string|min:6|confirmed',
+            'password' => 'required|string|min:8',
         ]);
 
         // Simpan user baru
@@ -72,7 +72,7 @@ class AuthController extends Controller
         ]);
 
         // Redirect atau response
-        return redirect('/login')->with('success', 'Registration Successfully');
+        return redirect('/')->with('success', 'Registration Successfully');
     }
 
     public function logout()
